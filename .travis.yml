@@ -22,15 +22,15 @@ script:
 - docker build -t udagram-frontend ./udagram-frontend
 
 ## Tagging
-- docker tag udagram-api-feed namhaibk105/udagram-api-feed:latest
-- docker tag udagram-api-user namhaibk105/udagram-api-user:latest
-- docker tag udagram-frontend namhaibk105/udagram-frontend:v4
-- docker tag udagram-reverseproxy namhaibk105/udagram-reverseproxy:latest
+- docker tag udagram-api-feed namhainbb/udagram-api-feed:latest
+- docker tag udagram-api-user namhainbb/udagram-api-user:latest
+- docker tag udagram-frontend namhainbb/udagram-frontend:v4
+- docker tag udagram-reverseproxy namhainbb/udagram-reverseproxy:latest
 
 ## Format DOCKER information
 after-success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push namhaibk105/udagram-reverseproxy:latest
-- docker push namhaibk105/udagram-api-feed:latest
-- docker push namhaibk105/udagram-api-user:latest
-- docker push namhaibk105/udagram-frontend:v4
+- docker push namhainbb/udagram-reverseproxy:latest
+- docker push namhainbb/udagram-api-feed:latest
+- docker push namhainbb/udagram-api-user:latest
+- docker push namhainbb/udagram-frontend:v4
